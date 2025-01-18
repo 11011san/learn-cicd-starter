@@ -29,7 +29,7 @@ func TestBearerToken(t *testing.T) {
 		return
 	}
 
-	headers.Set("Authorization", "ApiKey1 "+token)
+	headers.Set("Authorization", "ApiKey "+token)
 	bearerToken, err = GetAPIKey(headers)
 	if err != nil {
 		t.Errorf("Should have rtrived a token")
